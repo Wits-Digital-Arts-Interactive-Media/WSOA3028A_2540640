@@ -4,28 +4,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WSOA3028A Annas Website _2540640">
-    <meta name="author" content="Anna Yang">
-    <title>WSOA3028A Anna Yang</title>
+    <title>Welcome to My Website</title>
+    <style>
+        body {
+            background-image: url('Images/background.PNG');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #name {
+            float: left;
+            padding: 10px;
+            color: white;
+        }
+
+        nav {
+            float: right;
+            padding: 10px;
+            color: white;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .section {
+            width: 30%;
+            float: left;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .section img {
+            width: 100%;
+            height: auto;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <h1> WSOA3028A_Anna Yang</h1>
+        <div id="name">Ying Yang</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="essays.html">Essays</a></li>
+            </ul>
+        </nav>
+        <h1>Welcome</h1>
+        <img src="Images/one.png" alt="Welcome Image">
     </header>
-    <nav>
-        <ul>
-            <li>Home</li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="essays.html">Essays</a></li>
-        </ul>
-    </nav>
-    <h1> Its me Anna </h1>
-    <p>LOL .</p>
-    <h2>Hi  :</h2>
-    <img src="Images/eh.PNG" alt=" ok lets see if this works ">
-
-
+    <div class="clear"></div>
+    <div class="section">
+        <h2>Recent Blogs</h2>
+        <img src="Images/eh.PNG" alt="Blog Image">
+    </div>
+    <div class="section">
+        <h2>About Me</h2>
+        <img src="Images/eh.PNG" alt="About Me Image">
+    </div>
+    <div class="section">
+        <h2>Most Recent Essays</h2>
+        <img src="Images/eh.PNG" alt="Essay Image">
+    </div>
 </body>
 
 </html>

@@ -31,12 +31,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Check if the user's name is saved in localStorage
+   
     const userName = localStorage.getItem('userName');
     if (userName) {
         animateWelcomeText(`Welcome, ${userName}!`);
     } else {
-        // Prompt the user for their name if not saved
+       
         const nameInput = prompt('Please enter your name:');
         if (nameInput) {
             localStorage.setItem('userName', nameInput);

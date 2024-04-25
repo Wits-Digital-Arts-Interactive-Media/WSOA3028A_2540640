@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             animateWelcomeText(`Welcome, ${nameInput}!`);
         }
     }
+    
 });
 
 function toggleSubMenu(submenu) {

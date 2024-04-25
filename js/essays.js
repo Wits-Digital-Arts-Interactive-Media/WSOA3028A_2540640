@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('nav a');
-    const submenu = document.querySelector('nav ul .submenu');
-
+    const submenu = document.querySelector('nav ul.submenu');
     submenu.style.display = 'none';
 
     const blogLink = document.querySelector('nav ul li:nth-child(2) a'); 
@@ -32,10 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     
-function toggleSubMenu(submenu) {
-    if (submenu.style.display === 'block') {
-        submenu.style.display = 'none';
-    } else {
-        submenu.style.display = 'block';
+    function toggleSubMenu(submenu) {
+        if (submenu.style.display === 'block') {
+            submenu.style.display = 'none';
+        } else {
+            submenu.style.display = 'block';
+        }
     }
-}
+});

@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const likeCountDisplays = document.querySelectorAll('.like-count');
 
     likeButtons.forEach((likeButton, index) => {
-        const postId = index + 1; // Assuming each post has a unique ID
+        const postId = index + 1; 
         let liked = localStorage.getItem(`liked_${postId}`);
         let likeCount = parseInt(localStorage.getItem(`likeCount_${postId}`)) || 0;
 
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem(`liked_${postId}`, 'true');
                 localStorage.setItem(`likeCount_${postId}`, likeCount);
                 likeCountDisplays[index].textContent = likeCount;
-                likeButton.disabled = true; // Disable the button after clicking
+                likeButton.disabled = true; 
             }
         });
 

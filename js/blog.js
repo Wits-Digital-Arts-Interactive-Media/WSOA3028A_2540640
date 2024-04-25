@@ -30,7 +30,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    
+    // Like button implementation
+    const likeButtons = document.querySelectorAll('.like-button');
+    const likeCountDisplays = document.querySelectorAll('.like-count');
+
+    likeButtons.forEach((likeButton, index) => {
+        const postId = index + 1; // Assuming each post has a unique ID
+        let liked = localStorage.getItem(`liked_${postId}`);
+        let likeCount = parseInt(localStorage.getItem(`likeCount_${postId}`)) || 0;
+
+        if (liked === 'true') {
+            likeButton.disabled = true;
+        }
+
+        likeButton.addEventListener('click', () => {
+            if (liked !== 'true') {
+                likeCount++;
+                localStorage.setItem(`liked_${postId}`, 'true');
+                localStorage.setItem(`likeCount_${postId}`, likeCount);
+                likeCountDisplays[index].textContent = likeCount;
+                likeButton.disabled = true; // Disable the button after clicking
+            }
+        });
+
+        likeCountDisplays[index].textContent = likeCount;
+    });
+
     function toggleSubMenu(submenu) {
         if (submenu.style.display === 'block') {
             submenu.style.display = 'none';

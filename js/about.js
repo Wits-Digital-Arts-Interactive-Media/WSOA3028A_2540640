@@ -38,4 +38,37 @@ document.addEventListener('DOMContentLoaded', () => {
             submenu.style.display = 'block';
         }
     }
+
+    
+    const apiKey = '07f4bab03ed0457895e232338242804';
+    const city = 'Johannesburg'; 
+    const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
+
+    fetch(apiUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            
+            const weatherContainer = document.getElementById('weather');
+            const weatherInfo = document.createElement('div');
+            weatherInfo.innerHTML = `
+                <h3>Watch how cool this is....the weather now in ${city} is</h3>
+                <p>Temperature: ${data.current.temp_c}°C</p>
+                <p>Condition: ${data.current.condition.text}</p>
+            `;
+            weatherContainer.appendChild(weatherInfo);
+        })
+        .catch(error => {
+            console.error('There was a problem fetching weather data:', error);
+           
+            const weatherContainer = document.getElementById('weather');
+            const weatherError = document.createElement('div');
+            weatherError.textContent = 'Unable to fetch weather data. Please try again later , my free trail has ended.';
+            weatherContainer.appendChild(weatherError);
+        });
 });
+

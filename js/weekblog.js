@@ -5,21 +5,21 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Define navigation items
         const navItems = [
-            { text: 'Home', href: 'index.html' },
+            { text: 'Home', href: '../index.html' },
             { text: 'Blog', href: '#', submenu: [
-                { text: 'Week 1 Blog', href: 'Weekly blog/week1blog.html' },
-                { text: 'Week 2 Blog', href: 'Weekly blog/week2blog.html' },
-                { text: 'Week 3 Blog', href: 'Weekly blog/week3blog.html' },
-                { text: 'Week 4 Blog', href: 'Weekly blog/week4blog.html' },
-                { text: 'Week 6 Blog', href: 'Weekly blog/week6blog.html' },
-                { text: 'Week 8 Blog', href: 'Weekly blog/week8blog.html' },
-                { text: 'Week 9 Blog', href: 'Weekly blog/week9blog.html' },
-                { text: 'Week 10 Blog', href: 'Weekly blog/week10blog.html' },
+                { text: 'Week 1 Blog', href: '../Weekly blog/week1blog.html' },
+                { text: 'Week 2 Blog', href: '../Weekly blog/week2blog.html' },
+                { text: 'Week 3 Blog', href: '../Weekly blog/week3blog.html' },
+                { text: 'Week 4 Blog', href: '../Weekly blog/week4blog.html' },
+                { text: 'Week 6 Blog', href: '../Weekly blog/week6blog.html' },
+                { text: 'Week 8 Blog', href: '../Weekly blog/week8blog.html' },
+                { text: 'Week 9 Blog', href: '../Weekly blog/week9blog.html' },
+                { text: 'Week 10 Blog', href: '../Weekly blog/week10blog.html' },
             ] },
-            { text: 'Essays', href: 'essays.html' },
-            { text: 'About', href: 'about.html' },
-            { text: 'Design', href: 'websitedesign.html' },
-            { text: 'Portfolio', href: 'portfolio.html' }
+            { text: 'Essays', href: '../essays.html' },
+            { text: 'About', href: '../about.html' },
+            { text: 'Design', href: '../websitedesign.html' },
+            { text: 'Portfolio', href: '../portfolio.html' }
         ];
 
         // Create and append navigation links
@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     blogLink.addEventListener('click', (event) => {
         const currentTime = new Date().getTime(); 
         if (currentTime - lastClickTime < 500) {
-            window.location.href = 'blog.html';
+            window.location.href = '../blog.html';
         }
         lastClickTime = currentTime;
         

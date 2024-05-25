@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Essays</title>
-    <link rel="stylesheet" href="css/styles.css"> 
+    <link rel="stylesheet" href="styling/essay.css">
 </head>
 
 <body>
@@ -12,27 +13,107 @@
         <table>
             <tr>
                 <td><div id="name">Ying Yang</div></td>
-                <td>
-                    <nav>
-                        <ul id="navList"></ul> <!-- Empty ul element for dynamic navigation -->
-                    </nav>
-                </td>
+                <td></td>
             </tr>
         </table>
     </header>
 
+    <main>
+        <h1 class="centered-heading">Welcome to my Essays</h1>
+        <section class="essay-grid">
+            <div class="essay-card" data-essay="1">
+                <h2>1</h2>
+                <p>Decoding Gumtree: A Journey through UI, UX, and Ethical Dimensions</p>
+                <button class="read-more">Read More</button>
+                <a href="Essays/Essayone.pdf" class="download" download>Download</a>
+                <div class="essay-content">
+                    <h2>Decoding Gumtree: A Journey through UI, UX, and Ethical Dimensions</h2>
+                    <p>Explore the intricate world of Gumtree.co.za through this essay's examination of its user interface (UI) and user experience (UX). Delve into the design intricacies and ethical considerations that shape Gumtree's digital marketplace. Discover how Gumtree's interface engages users while maintaining ethical standards, and uncover the tapestry of user experience woven with accessibility, efficiency, and trustworthiness. Gain insight into Gumtree's role as a bastion of effective UI and UX design in the dynamic digital landscape.</p>
+                    <button class="close">Close</button>
+                </div>
+            </div>
 
+            <div class="essay-card" data-essay="2">
+                <h2>2</h2>
+                <p>Description is still coming</p>
+                <button class="read-more">Read More</button>
+                <a href="Essays/Essaytwo.pdf" class="download" download>Download</a>
+                <div class="essay-content">
+                    <h2>Essay 2 Title</h2>
+                    <p>Description for essay 2 is still coming.</p>
+                    <button class="close">Close</button>
+                </div>
+            </div>
+            <div class="essay-card" data-essay="3">
+                <h2>3</h2>
+                <p>Description is still coming</p>
+                <button class="read-more">Read More</button>
+                <a href="Essays/Essaythree.pdf" class="download" download>Download</a>
+                <div class="essay-content">
+                    <h2>Essay 3 Title</h2>
+                    <p>Description for essay 3 is still coming.</p>
+                    <button class="close">Close</button>
+                </div>
+            </div>
+            <div class="essay-card" data-essay="4">
+                <h2>4</h2>
+                <p>Description is still coming</p>
+                <button class="read-more">Read More</button>
+                <a href="Essays/Essayfour.pdf" class="download" download>Download</a>
+                <div class="essay-content">
+                    <h2>Essay 4 Title</h2>
+                    <p>Description for essay 4 is still coming.</p>
+                    <button class="close">Close</button>
+                </div>
+            </div>
+            <div class="essay-card" data-essay="5">
+                <h2>5</h2>
+                <p>Description is still coming</p>
+                <button class="read-more">Read More</button>
+                <a href="Essays/Essayfive.pdf" class="download" download>Download</a>
+                <div class="essay-content">
+                    <h2>Essay 5 Title</h2>
+                    <p>Description for essay 5 is still coming.</p>
+                    <button class="close">Close</button>
+                </div>
+            </div>
+            <!--  more essays -->
+        </section>
+    </main>
 
-
-    <div class="essay">
-        <h2>Decoding Gumtree: A Journey through UI, UX, and Ethical Dimensions</h2>
-        <p>Explore the intricate world of Gumtree.co.za through this essay's examination of its user interface (UI) and user experience (UX). Delve into the design intricacies and ethical considerations that shape Gumtree's digital marketplace. Discover how Gumtree's interface engages users while maintaining ethical standards, and uncover the tapestry of user experience woven with accessibility, efficiency, and trustworthiness. Gain insight into Gumtree's role as a bastion of effective UI and UX design in the dynamic digital landscape.</p>
-        <p><a href="Essays/Essayone.pdf" target="_blank">Click here to download/view the PDF version</a></p>
+    <div class="menu-toggle">☰</div>
+    <div class="menu-overlay">
+        <div class="menu-close">×</div>
+        <nav class="overlay-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="blog.html">Blog</a>
+                    <ul class="submenu">
+                        <li><a href="Weekly blog/week1blog.html">Week 1 Blog</a></li>
+                        <li><a href="Weekly blog/week2blog.html">Week 2 Blog</a></li>
+                        <li><a href="Weekly blog/week3blog.html">Week 3 Blog</a></li>
+                        <li><a href="Weekly blog/week4blog.html">Week 4 Blog</a></li>
+                        <li><a href="Weekly blog/week6blog.html">Week 6 Blog</a></li>
+                        <li><a href="Weekly blog/week8blog.html">Week 8 Blog</a></li>
+                        <li><a href="Weekly blog/week9blog.html">Week 9 Blog</a></li>
+                        <li><a href="Weekly blog/week10blog.html">Week 10 Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="essays.html">Essays</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="websitedesign.html">Design</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
     </div>
-   
-    <!-- <button onclick="scrollToTop()">To The Top</button> --> 
 
-    <script src="js/essays.js" defer></script> 
-    <script src="js/Scrolltothetop.js" defer></script> 
+    <footer>
+        <p>&copy; 2024 Ying Yang. All rights reserved.</p>
+    </footer>
+
+    <script src="js/essays.js" defer></script>
+    <script src="js/Scrolltothetop.js" defer></script>
 </body>
+
 </html>

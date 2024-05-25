@@ -64,4 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             essayGrid.scrollLeft -= scrollSpeed;
         }
     });
+
+    
+
 });

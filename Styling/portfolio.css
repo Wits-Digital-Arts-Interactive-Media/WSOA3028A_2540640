@@ -1,0 +1,192 @@
+body {
+    background-color: white;
+    font-family: 'Baguet Script', cursive;
+    cursor: url('cursor.png'), auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+#name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#centralLine {
+    width: 2px;
+    background-color: black;
+    height: 100%;
+    position: fixed;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+#artworkContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.artwork {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    opacity: 0;
+    transition: opacity 1s;
+    position: relative;
+    width: 100%;
+}
+
+.artwork img {
+    max-width: 500px;
+    margin: 0 20px;
+    transition: transform 0.3s;
+}
+
+.artwork .description {
+    max-width: 400px;
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.artwork:nth-child(odd) {
+    justify-content: flex-end; /* Artwork on the right */
+}
+
+.artwork:nth-child(odd) .description {
+    left: calc(50% - 500px); /* Position the description on the left of the central line */
+}
+
+.artwork:nth-child(even) {
+    justify-content: flex-start; /* Artwork on the left */
+}
+
+.artwork:nth-child(even) .description {
+    right: calc(50% - 500px); /* Position the description on the right of the central line */
+}
+
+.artwork:hover img {
+    transform: scale(1.1);
+}
+
+.artwork:hover .description {
+    display: block;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 1001;
+    color: white;
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    flex-direction: column;
+}
+
+.menu-close {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 5em;
+    color: white;
+    cursor: pointer;
+}
+
+.overlay-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.overlay-nav li {
+    margin: 20px 0;
+}
+
+.overlay-nav a {
+    font-family: 'Baguet Script', cursive;
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.overlay-nav a:hover {
+    transform: rotate(10deg) scale(1.2);
+    color: #CFB095;
+}
+
+.submenu {
+    display: none;
+    padding-left: 20px;
+}
+
+.overlay-nav > ul > li:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    margin: 10px 0;
+}
+
+.submenu a {
+    font-size: 1.5em;
+}
+
+.submenu a:hover {
+    font-size: 1.7em;
+    color: #CFB095;
+}

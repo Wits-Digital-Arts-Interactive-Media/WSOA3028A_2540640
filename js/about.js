@@ -1,140 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Function to create and append navigation elements
-    function createNavigation() {
-        const nav = document.getElementById('navList');
-        
-        // Define navigation items
-        const navItems = [
-            { text: 'Home', href: 'index.html' },
-            { text: 'Blog', href: '#', submenu: [
-                { text: 'Week 1 Blog', href: 'Weekly blog/week1blog.html' },
-                { text: 'Week 2 Blog', href: 'Weekly blog/week2blog.html' },
-                { text: 'Week 3 Blog', href: 'Weekly blog/week3blog.html' },
-                { text: 'Week 4 Blog', href: 'Weekly blog/week4blog.html' },
-                { text: 'Week 6 Blog', href: 'Weekly blog/week6blog.html' },
-                { text: 'Week 8 Blog', href: 'Weekly blog/week8blog.html' },
-                { text: 'Week 9 Blog', href: 'Weekly blog/week9blog.html' },
-                { text: 'Week 10 Blog', href: 'Weekly blog/week10blog.html' },
-            ] },
-            { text: 'Essays', href: 'essays.html' },
-            { text: 'About', href: 'about.html' },
-            { text: 'Design', href: 'websitedesign.html' },
-            { text: 'Portfolio', href: 'portfolio.html' }
-        ];
+    
+    const sections = document.querySelectorAll('.section-content');
 
-        // Create and append navigation links
-        navItems.forEach(item => {
-            const li = document.createElement('li');
-            const a = document.createElement('a');
-            a.textContent = item.text;
-            a.href = item.href;
-            li.appendChild(a);
-            
-            // If item has submenu, create submenu
-            if (item.submenu) {
-                const ul = document.createElement('ul');
-                ul.classList.add('submenu');
-                item.submenu.forEach(subItem => {
-                    const subLi = document.createElement('li');
-                    const subA = document.createElement('a');
-                    subA.textContent = subItem.text;
-                    subA.href = subItem.href;
-                    subLi.appendChild(subA);
-                    ul.appendChild(subLi);
-                });
-                li.appendChild(ul);
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add('animate');
+                }, index * 300); 
             }
-            
-            nav.appendChild(li);
         });
-    }
-
-    // Call the function to create navigation
-    createNavigation();
-
-    // Submenu toggle functionality
-    const submenu = document.querySelector('nav ul.submenu');
-    submenu.style.display = 'none';
-
-    const blogLink = document.querySelector('nav > ul > li:nth-child(2) > a'); // Targeting the Blog link
-    blogLink.addEventListener('click', (event) => {
-        const currentTime = new Date().getTime(); 
-        if (currentTime - lastClickTime < 500) {
-            window.location.href = 'blog.html';
-        }
-        lastClickTime = currentTime;
-        
-        const submenu = blogLink.nextElementSibling;
-        toggleSubMenu(submenu);
+    }, {
+        threshold: 0.1
     });
 
-    let lastClickTime = 0; // Initializing lastClickTime here
-
-    function toggleSubMenu(submenu) {
-        if (submenu.style.display === 'block') {
-            submenu.style.display = 'none';
-        } else {
-            submenu.style.display = 'block';
-        }
-    }
-
-    // Link hover effect
-    const links = document.querySelectorAll('nav a');
-    links.forEach(link => {
-        link.addEventListener('mouseover', () => {
-            link.style.fontSize = '1.2em';
-        });
-
-        link.addEventListener('mouseout', () => {
-            link.style.fontSize = '';
-        });
+    sections.forEach(section => {
+        observer.observe(section);
     });
 
-    // Weather display functionality
-    let weatherDisplayed = false; 
+    // Menu toggle functionality
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuOverlay = document.querySelector('.menu-overlay');
+    const menuClose = document.querySelector('.menu-close');
 
-    function fetchWeather() {
-        const apiKey = '07f4bab03ed0457895e232338242804';
-        const city = 'Johannesburg'; 
-        const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
+    menuToggle.addEventListener('click', () => {
+        menuOverlay.style.display = 'flex';
+    });
 
-        fetch(apiUrl)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                const weatherContainer = document.getElementById('weather');
-                const weatherInfo = document.createElement('div');
-                weatherInfo.innerHTML = `
-                    <h3 id="weatherHeading">Look how cool, the current weather in ${city} is</h3>
-                    <p>Temperature: ${data.current.temp_c}°C</p>
-                    <p>Condition: ${data.current.condition.text}</p>
-                `;
-                weatherContainer.appendChild(weatherInfo);
-                weatherDisplayed = true; // Weather is now displayed
-            })
-            .catch(error => {
-                console.error('There was a problem fetching weather data:', error);
-                
-                const weatherContainer = document.getElementById('weather');
-                const weatherError = document.createElement('div');
-                weatherError.textContent = 'Unable to fetch weather data. Please try again later.';
-                weatherContainer.appendChild(weatherError);
-            });
-    }
-
-    const weatherButton = document.getElementById('weatherButton');
-    weatherButton.addEventListener('click', () => {
-        const weatherContainer = document.getElementById('weather');
-
-        if (weatherDisplayed) {
-            weatherContainer.innerHTML = '';
-            weatherDisplayed = false; 
-        } else {
-            fetchWeather();
-        }
+    menuClose.addEventListener('click', () => {
+        menuOverlay.style.display = 'none';
     });
 });

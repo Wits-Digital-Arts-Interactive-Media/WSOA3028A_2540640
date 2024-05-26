@@ -4,59 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
+    <link rel="stylesheet" href="Styling/about.css">
 </head>
-
 <body>
     <header>
         <table>
             <tr>
-                <td><div id="name">Ying Yang</div></td>
+                <td>
+                    <div id="name">Ying Yang</div>
+                </td>
                 <td>
                     <nav>
-                        <ul id="navList"></ul> <!-- Empty ul element for dynamic navigation -->
+                        <!-- Navigation will be handled by the menu overlay -->
                     </nav>
                 </td>
             </tr>
         </table>
     </header>
 
+    <main>
+        <div class="central-line"></div>
+        
+        <section class="section-content right">
+            <h2>Background</h2>
+            <p>As a Chinese individual, I don't fit into the typical stereotype. I might not be a genius, but math has always intrigued me, and you'll often find me tinkering away on the piano keys. Born in 2003 and practicing Islam, I'm a blend of cultures and experiences that shape who I am.</p>
+        </section>
+
+        <section class="section-content left">
+            <h2>Goals</h2>
+            <p>My goal? Simple yet ambitious. I want to walk across that stage, grab my degree, maybe pursue a master's or dive into another field – perhaps something in the realm of business. Dream big, right? Ultimately, I envision myself with a PhD, juggling the responsibilities of academia with the joys of being a housewife. Oh, and there's this little dream of mine to open a cozy coffee shop or some other type of shop – who knows? If all else fails, I'll roll up my sleeves and dive into the workforce. Life's an adventure, and I'm ready for whatever it throws my way.</p>
+        </section>
+
+        <section class="section-content right">
+            <h2>You're wondering about my daily grind, huh?</h2>
+            <p> Well, hold onto your laptop, because it's about to get wild. Picture this: I kick off my day with the most intense sport of all time—sleeping. Then, I morph into a chief and whip up some breakfast (or at least pour cereal). Next, I go on the thrilling adventure known as "campus," where I conquer assignment and lectures like a true hero. And just when you think it can't get any more fun , I wrap it all up with a theee best thing —going back to bed. Yep, my life's a rollercoaster of excitement. </p>
+        </section>
+
+        <section class="section-content left">
+            <h2>Passion</h2>
+            <p>Absolutely! I find joy in the little things: enjoying a good meal, getting lost in doodles, and letting music fill the air with my piano. But you know what? I also cherish my alone time, those moments of blissful nothingness. And as for the future? Well, I've got dreams, like anyone else. Maybe one day I'll hit the jackpot, thanks to my future hubby. Inshallah, Ameen </p>
+        </section>
 
 
+        <!-- Add more sections as needed -->
+    </main>
 
-    <section>
-        <h2>Introduction</h2>
-        <p>Hey there! I'm Ying, though most people call me Anna. Currently, I'm navigating the academic waters at the University of the Witwatersrand. Now, I'll be honest ,I don't have a list of interests that light up my world, but that's okay. Life's about exploration, right? I'm still on the hunt for that one thing that'll make me jump out of bed in the morning. Back in the day, I had a thing for painting, but high school Art class kind of put a damper on that.</p>
-    </section>
-   
-    <section>
-        <h2>Background</h2>
-        <p>As a Chinese individual, I don't fit into the typical stereotype. I might not be a genius, but math have always intrigued me, and you'll often find me tinkering away on the piano keys. Born in 2003 and practicing Islam, I'm a blend of cultures and experiences that shape who I am.</p>
-    </section>
-    <section>
-        <h2>Interests</h2>
-        <p>In terms of interests, I'm all about the simple pleasures in life: sleeping, eating, and scrolling through TikTok for hours on end.
-        </p>
-    </section>
-    <section>
-        <h2>Goals</h2>
-        <p>My goal? Simple yet ambitious. I want to walk across that stage, grab my degree, maybe pursue a master's or dive into another field – perhaps something in the realm of business. Dream big, right? Ultimately, I envision myself with a PhD, juggling the responsibilities of academia with the joys of being a housewife. Oh, and there's this little dream of mine to open a cozy coffee shop or some other type of shop – who knows? If all else fails, I'll roll up my sleeves and dive into the workforce. Life's an adventure, and I'm ready for whatever it throws my way.</p>
-    </section>
-    
-    <button id="weatherButton">See Current Weather In JHB</button>
-<div id="weather"></div>
-
-    
+    <div class="menu-toggle">☰</div>
+    <div class="menu-overlay">
+        <div class="menu-close">×</div>
+        <nav class="overlay-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="blog.html">Blog</a>
+                    <ul class="submenu">
+                        <li><a href="Weekly blog/week1blog.html">Week 1 Blog</a></li>
+                        <li><a href="Weekly blog/week2blog.html">Week 2 Blog</a></li>
+                        <li><a href="Weekly blog/week3blog.html">Week 3 Blog</a></li>
+                        <li><a href="Weekly blog/week4blog.html">Week 4 Blog</a></li>
+                        <li><a href="Weekly blog/week6blog.html">Week 6 Blog</a></li>
+                        <li><a href="Weekly blog/week8blog.html">Week 8 Blog</a></li>
+                        <li><a href="Weekly blog/week9blog.html">Week 9 Blog</a></li>
+                        <li><a href="Weekly blog/week10blog.html">Week 10 Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="essays.html">Essays</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="websitedesign.html">Design</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <footer>
-        <p>Feel free to contact me if you have any questions or would like to connect!</p>
+        <p>&copy; 2024 Ying Yang. All rights reserved.</p>
     </footer>
 
-  <!--  <button onclick="scrollToTop()">To The Top</button>-->
-
-
     <script src="js/about.js"></script>
-
-    <!--<script src="js/Scrolltothetop.js"></script>-->
-
+    <script src="js/Scrolltothetop.js"></script>
 </body>
 </html>

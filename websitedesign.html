@@ -5,136 +5,214 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design</title>
+    <link rel="stylesheet" href="Styling/websitedesign.css">
 </head>
 
 <body>
     <header>
         <table>
             <tr>
-                <td><div id="name">Ying Yang</div></td>
+                <td>
+                    <div id="name">Ying Yang</div>
+                </td>
                 <td>
                     <nav>
-                        <ul id="navList"></ul> <!-- Empty ul element for dynamic navigation -->
+                        <!-- Navigation will be handled by the menu overlay -->
                     </nav>
                 </td>
             </tr>
         </table>
     </header>
 
+    <main>
+        <div class="sidebar">
+            <ul>
+                <li><a href="#InitialWireframeConcepts">Initial Wireframe Concepts</a></li>
+                <li><a href="#UserInterface">User Interface</a></li>
+                <li><a href="#homePage">Home Page</a></li>
+                <li><a href="#portfolioPage">Portfolio Page</a></li>
+                <li><a href="#blogPage">Blog Page</a></li>
+                <li><a href="#essayPage">Essay Page</a></li>
+                <li><a href="#profilePage">Profile Page</a></li>
+            </ul>
+        </div>
+        <div class="content-grid">
 
 
-    
-    <h1>Design</h1>
-
-    <h2>Page Design</h2>
-    <ul>
-        <li><a href="#InitialWireframeConcepts">Initial Wireframe Concepts</a></li>
-        <li><a href="#UserInterface">User Interface</a></li>
-        <li><a href="#homePage">Home Page</a></li>
-        <li><a href="#portfolioPage">Portfolio Page</a></li>
-        <li><a href="#blogPage">Blog Page</a></li>
-        <li><a href="#essayPage">Essay Page</a></li>
-        <li><a href="#profilePage">Profile Page</a></li>
-</ul>
-
-   
-
-    <h1 id="InitialWireframeConcepts">Initial Wireframe Concepts</h1>
-    
-    <h2>Wireframe #1: Home Page</h2>
-    <img src="Images/wireframe1.JPG" alt="Wireframe 1: Home Page" width="800" height="1000">
-    <p>For the home page, I envision a clean layout with a prominent header showcasing the website name and a concise navigation menu. Below, a hero section might feature a brief introduction or a captivating image to engage visitors right away.</p>
-    
-    <h2>Wireframe #2: Blog Section</h2>
-    <img src="Images/wireframe2.JPG" alt="Wireframe 2: Blog Section" width="800" height="500">
-    <p>In the blog section, simplicity is key. I'm considering a grid-style layout to display blog post previews, with each post represented by a thumbnail image and a brief excerpt. A "Read More" button would lead to the full article, encouraging further exploration.</p>
-    
-    <h2>Wireframe #3: Essays Section</h2>
-    <img src="Images/wireframe3.JPG" alt="Wireframe 3: Essays Section" width="800" height="500">
-    <p>Like the blog section, the essays area will maintain a consistent design language. Here, I'm thinking of a grid-style layout with numbered tiles representing each essay, providing a visually appealing overview. Each tile will feature a title and a brief description, allowing visitors to quickly grasp the essence of each essay.</p>
-    <p>To accommodate a large number of essays, I'm considering implementing horizontal scrolling functionality. This intuitive feature will allow visitors to navigate through the essays by swiping or clicking left and right, ensuring a seamless browsing experience.</p>
-    <p>Including numbered tiles not only adds a touch of uniqueness but also aids navigation, making it easier for visitors to find specific essays of interest. By combining aesthetics with functionality, this wireframe aims to enhance user engagement and encourage exploration of the essay collection.</p>
-    
-    
-    <button onclick="scrollToTop()">To The Top</button>
+            <section id="InitialWireframeConcepts" class="content-item">
+                <h1>Initial Wireframe Concepts</h1>
+                <div class="content-details">
+                    <h2>Wireframe #1: Home Page</h2>
+                    <img src="Images/wireframe1.JPG" alt="Wireframe 1: Home Page">
+                    <p>For the home page, I envision a clean layout with a prominent header showcasing the website name and a concise navigation menu. Below, a hero section might feature a brief introduction or a captivating image to engage visitors right away.</p>
+                   
+                    <h2>Wireframe #2: Blog Section</h2>
+                    <img src="Images/wireframe2.JPG" alt="Wireframe 2: Blog Section" >
+                    <p>In the blog section, simplicity is key. I'm considering a grid-style layout to display blog post previews, with each post represented by a thumbnail image and a brief excerpt. A "Read More" button would lead to the full article, encouraging further exploration.</p>
+                    
+                    <h2>Wireframe #3: Essays Section</h2>
+                    <img src="Images/wireframe3.JPG" alt="Wireframe 3: Essays Section" >
+                    <p>Like the blog section, the essays area will maintain a consistent design language. Here, I'm thinking of a grid-style layout with numbered tiles representing each essay, providing a visually appealing overview. Each tile will feature a title and a brief description, allowing visitors to quickly grasp the essence of each essay.</p>
+                    <p>To accommodate a large number of essays, I'm considering implementing horizontal scrolling functionality. This intuitive feature will allow visitors to navigate through the essays by swiping or clicking left and right, ensuring a seamless browsing experience.</p>
+                    <p>Including numbered tiles not only adds a touch of uniqueness but also aids navigation, making it easier for visitors to find specific essays of interest. By combining aesthetics with functionality, this wireframe aims to enhance user engagement and encourage exploration of the essay collection.</p>
+                </div>
+                <button class="read-more">Read More</button>
+            </section>
 
 
-    <h1 id="UserInterface">UserInterface</h1>
-    <img src="Images/website.png" alt="User Interface">
-    
-    <p>Imagine my website as a well-organized library, with each section representing a different genre of books waiting to be explored. At the heart of this digital library lies the Home Page, akin to the foyer, where visitors are greeted with curated highlights from various sections.</p>
-    
-    <p>
-        Moving on, we have the Portfolio section, which serves as the main exhibit hall. Here, visitors can peruse through a curated collection of my most notable works and projects, gaining insight into my skills and expertise.
-    </p>
-    <p>
-        Next in line is the About page, functioning as a virtual biography. It offers visitors a glimpse into the person behind the screen, providing background information and insights into my professional journey and aspirations.
-    </p>
-    <p>
-        Then there's the Designs section, akin to a workshop, where visitors can witness the creative process unfold. This area showcases the latest design endeavors, offering a behind-the-scenes look at the ideation and execution of various projects.
-    </p>
-    <p>
-        Lastly, we have the Blogs section, akin to a literary salon, where visitors can engage with thought-provoking articles and insights. Here, I share weekly reflections and commentary on a variety of topics, inviting visitors to join the conversation.
-    </p>
-    <p>
-        What ties it all together are the intuitive navigation elements, represented by arrows in the interface. These elements allow visitors to seamlessly navigate between sections without losing their place, ensuring a smooth and enjoyable browsing experience.
-    </p>
-    
-    <button onclick="scrollToTop()">To The Top</button>
 
-    <h1 id="homePage">Home Page Design </h1>
-    <img src="Images/Homepage.png" alt="Home Page" width="800" height="1000">>
-    <p> As depicted above, my vision for the homepage is one of elegant minimalism, characterized by a subdued palette of greys infused with a refreshing blue-green tint. I aim to streamline navigation through a discrete button, concealing the complexities to offer a seamless user experience. Beneath this understated interface, I envisage a captivating 3D animation, setting the stage for an immersive journey into my digital space.
-    </p>  
-    <p> Furthermore, I intend to showcase my latest creations—be it blogs, essays, or insights—arranged in a visually engaging format. Each element serves as a portal, inviting visitors to delve deeper into my thoughts and experiences. By simply clicking on these curated images, users will seamlessly transition to the respective content, fostering a dynamic interaction that resonates with the essence of my digital presence.
-    </p>
-    <img src="Images/Homepage2.png" alt="Home Page" width="800" height="500">
-    <p> In the depiction above, I've outlined an iteration of my homepage design. It encompasses various sections such as blogs, essays, home, about, and portfolio, each offering a distinct aspect of my digital presence. Notably, under the 'blog' section, there's a submenu providing easy access to categorized entries, organized by weeks</p>
-    <p>A key feature of the design is the integration of images as clickable elements. These serve as intuitive pathways leading to different sections of the website, including blogs, essays, and about me. This intuitive interface aims to engage visitors seamlessly, encouraging exploration and interaction with the diverse content available</p>  
+            <!-- Repeat this block for each section -->
+            <section id="UserInterface" class="content-item">
+                <h1>User Interface</h1>
+                <div class="content-details">
+                    <img src="Images/website.png" alt="User Interface">
+                    <p>Imagine my website as a well-organized library, with each section representing a different genre of books waiting to be explored. At the heart of this digital library lies the Home Page, akin to the foyer, where visitors are greeted with curated highlights from various sections.</p>
+                    <p>
+                        Moving on, we have the Portfolio section, which serves as the main exhibit hall. Here, visitors can peruse through a curated collection of my most notable works and projects, gaining insight into my skills and expertise.
+                    </p>
+                    <p>
+                        Next in line is the About page, functioning as a virtual biography. It offers visitors a glimpse into the person behind the screen, providing background information and insights into my professional journey and aspirations.
+                    </p>
+                    <p>
+                        Then there's the Designs section, akin to a workshop, where visitors can witness the creative process unfold. This area showcases the latest design endeavors, offering a behind-the-scenes look at the ideation and execution of various projects.
+                    </p>
+                    <p>
+                        Lastly, we have the Blogs section, akin to a literary salon, where visitors can engage with thought-provoking articles and insights. Here, I share weekly reflections and commentary on a variety of topics, inviting visitors to join the conversation.
+                    </p>
+                    <p>
+                        What ties it all together are the intuitive navigation elements, represented by arrows in the interface. These elements allow visitors to seamlessly navigate between sections without losing their place, ensuring a smooth and enjoyable browsing experience.
+                    </p>
+                
+                </div>
+                <button class="read-more">Read More</button>
+            </section>
 
-    <button onclick="scrollToTop()">To The Top</button>
+            <!-- Add more sections similarly -->
+
+             <!-- Repeat this block for each section -->
+             <section id="homePage" class="content-item">
+                <h1>Home Page Design</h1>
+                <div class="content-details">
+
+                
+                    <img src="Images/Homepage.png" alt="Home Page" >
+                    <p> As depicted above, my vision for the homepage is one of elegant minimalism, characterized by a subdued palette of greys infused with a refreshing blue-green tint. I aim to streamline navigation through a discrete button, concealing the complexities to offer a seamless user experience. Beneath this understated interface, I envisage a captivating 3D animation, setting the stage for an immersive journey into my digital space.
+                    </p>  
+                    <p> Furthermore, I intend to showcase my latest creations—be it blogs, essays, or insights—arranged in a visually engaging format. Each element serves as a portal, inviting visitors to delve deeper into my thoughts and experiences. By simply clicking on these curated images, users will seamlessly transition to the respective content, fostering a dynamic interaction that resonates with the essence of my digital presence.
+                    </p>
+                    <img src="Images/Homepage2.png" alt="Home Page" >
+                    <p> In the depiction above, I've outlined an iteration of my homepage design. It encompasses various sections such as blogs, essays, home, about, and portfolio, each offering a distinct aspect of my digital presence. Notably, under the 'blog' section, there's a submenu providing easy access to categorized entries, organized by weeks</p>
+                    <p>A key feature of the design is the integration of images as clickable elements. These serve as intuitive pathways leading to different sections of the website, including blogs, essays, and about me. This intuitive interface aims to engage visitors seamlessly, encouraging exploration and interaction with the diverse content available</p>  
+                
+                </div>
+                <button class="read-more">Read More</button>
+            </section>
+
+           
+             <section id="portfolioPage" class="content-item">
+                <h1>Portfolio Page Design</h1>
+                <div class="content-details">
+
+                    <img src="Images/portfoliodesign.png" alt="Portfolio Page">
+                    <p>In my vision my portfolio page, I've crafted a captivating visual journey centered around a dynamic central line. As you navigate the page, this line becomes the conduit through which my creative inspirations unfold. On either side of the line, snippets revealing what and who has inspired my work emerge, creating an immersive narrative that evolves with each scroll.</p>
+                    <p>Picture this: as you glide down the page, encountering anecdotes about my influences, the anticipation builds. And when you reach the culmination of this narrative thread, a mesmerizing animation springs to life. Suddenly, my artwork materializes, each piece bursting onto the screen with its own unique flair.</p>
+                    <p>This thoughtful integration of storytelling and visual artistry ensures that every aspect of my portfolio page invites exploration and captivates the viewer's imagination.</p>
+                
+                </div>
+                <button class="read-more">Read More</button>
+            </section>
+
+            <!-- Add more sections similarly -->
+
+             <!-- Repeat this block for each section -->
+             <section id="blogPage" class="content-item">
+                <h1>Blog Page</h1>
+                <div class="content-details">
+
+                    
+                
+                    <img src="Images/blogdesign.png" alt="Blog Page" >
+                    <p>Within the layout of my blog page, each entry is thoughtfully presented with a corresponding image denoting its week of publication. Adjacent to these visuals lies a concise description, offering a glimpse into the content awaiting exploration. Positioned conveniently below the description is a 'Read More' button, serving as a gateway to delve deeper into the entirety of the blog post</p>
+                    <p>This structured approach ensures clarity and accessibility, facilitating seamless navigation through the array of entries. As visitors scroll down, they encounter a chronological cascade of blog entries, each encapsulating a unique perspective or topic. This intuitive design fosters engagement and encourages readers to immerse themselves in the diverse array of content awaiting discovery.</p>
+                    <img src="Images/blogdesign2.png" alt="Blog Page" >
+                    <p>In this iteration, the blog page not only serves as a gateway to other sections but also seamlessly connects users to all available blogs</p>
+                </div>
+                <button class="read-more">Read More</button>
+            </section>
+
+            
+
+             <!-- Repeat this block for each section -->
+             <section id="essayPage" class="content-item">
+                <h1>Essay Page Design</h1>
+                <div class="content-details">
 
 
-    <h1 id="portfolioPage">Portfolio Page Design </h1>
-    <img src="Images/portfoliodesign.png" alt="Portfolio Page" width="800" height="1000">
-    <p>In my vision my portfolio page, I've crafted a captivating visual journey centered around a dynamic central line. As you navigate the page, this line becomes the conduit through which my creative inspirations unfold. On either side of the line, snippets revealing what and who has inspired my work emerge, creating an immersive narrative that evolves with each scroll.</p>
-    <p>Picture this: as you glide down the page, encountering anecdotes about my influences, the anticipation builds. And when you reach the culmination of this narrative thread, a mesmerizing animation springs to life. Suddenly, my artwork materializes, each piece bursting onto the screen with its own unique flair.</p>
-    <p>This thoughtful integration of storytelling and visual artistry ensures that every aspect of my portfolio page invites exploration and captivates the viewer's imagination.</p>
-    <button onclick="scrollToTop()">To The Top</button>
+                    
+                
+                    <img src="Images/Essaydesign.png" alt="Essay Page" >
+                    <p>In envisioning the essay page, I imagine a sleek horizontal grid layout, where each grid corresponds to a numbered essay, neatly arranged from left to right. Within each grid, users will find a distinct number alongside a concise description of the essay, accompanied by a convenient 'Read More' link, likely directing to a PDF version for deeper exploration. This intuitive design encourages users to effortlessly navigate through the essays by scrolling horizontally, ensuring a seamless and engaging browsing experience.</p>
+                    <img src="Images/Essaydesign2.png" alt="Essay Page" >
+                    <p>In this iteration, the essay page not only provides links to other sections but also offers direct access to all available essay PDFs, enhancing the user's navigation experience.</p>
+                
+                </div>
+                <button class="read-more">Read More</button>
+            </section>
 
-    <h1 id="blogPage">Blog Page</h1>
-    <img src="Images/blogdesign.png" alt="Blog Page" width="800" height="500">
-    <p>Within the layout of my blog page, each entry is thoughtfully presented with a corresponding image denoting its week of publication. Adjacent to these visuals lies a concise description, offering a glimpse into the content awaiting exploration. Positioned conveniently below the description is a 'Read More' button, serving as a gateway to delve deeper into the entirety of the blog post</p>
-    <p>This structured approach ensures clarity and accessibility, facilitating seamless navigation through the array of entries. As visitors scroll down, they encounter a chronological cascade of blog entries, each encapsulating a unique perspective or topic. This intuitive design fosters engagement and encourages readers to immerse themselves in the diverse array of content awaiting discovery.</p>
-    <img src="Images/blogdesign2.png" alt="Blog Page" width="800" height="500">
-    <p>In this iteration, the blog page not only serves as a gateway to other sections but also seamlessly connects users to all available blogs</p>
-
-    <button onclick="scrollToTop()">To The Top</button>
+            <!-- Add more sections similarly -->
 
 
-    <h1 id="essayPage">Essay Page Design</h1>
-    <img src="Images/Essaydesign.png" alt="Essay Page" width="800" height="500">
-    <p>In envisioning the essay page, I imagine a sleek horizontal grid layout, where each grid corresponds to a numbered essay, neatly arranged from left to right. Within each grid, users will find a distinct number alongside a concise description of the essay, accompanied by a convenient 'Read More' link, likely directing to a PDF version for deeper exploration. This intuitive design encourages users to effortlessly navigate through the essays by scrolling horizontally, ensuring a seamless and engaging browsing experience.</p>
-    <img src="Images/Essaydesign2.png" alt="Essay Page" width="800" height="500">
-    <p>In this iteration, the essay page not only provides links to other sections but also offers direct access to all available essay PDFs, enhancing the user's navigation experience.</p>
-
-    
-    <button onclick="scrollToTop()">To The Top</button>
+             <!-- Repeat this block for each section -->
+             <section id="profilePage" class="content-item">
+                <h1>Profile Page Design</h1>
+                <div class="content-details">
 
 
-    <h1 id="profilePage">Profile Page Design</h1>
-    <img src="Images/profiledesign.png" alt="Portfolio Page" width="800" height="1000">
-    <p>On my profile page, a central line serves as a dynamic focal point. As you scroll, snippets about me emerge first on the right, then on the left, creating an engaging narrative. Additionally, in a captivating grid layout, three key aspects of my abilities gradually fade or elegantly fly into view, adding depth and interactivity to the user experience.</p>
+                    
+                    <img src="Images/profiledesign.png" alt="Portfolio Page" >
+                    <p>On my profile page, a central line serves as a dynamic focal point. As you scroll, snippets about me emerge first on the right, then on the left, creating an engaging narrative. Additionally, in a captivating grid layout, three key aspects of my abilities gradually fade or elegantly fly into view, adding depth and interactivity to the user experience.</p>
+                
+                
+                </div>
+                <button class="read-more">Read More</button>
+            </section>
 
-    
+            <!-- Add more sections similarly -->
+        </div>
+    </main>
 
+    <div class="menu-toggle">☰</div>
+    <div class="menu-overlay">
+        <div class="menu-close">×</div>
+        <nav class="overlay-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="blog.html">Blog</a>
+                    <ul class="submenu">
+                        <li><a href="Weekly blog/week1blog.html">Week 1 Blog</a></li>
+                        <li><a href="Weekly blog/week2blog.html">Week 2 Blog</a></li>
+                        <li><a href="Weekly blog/week3blog.html">Week 3 Blog</a></li>
+                        <li><a href="Weekly blog/week4blog.html">Week 4 Blog</a></li>
+                        <li><a href="Weekly blog/week6blog.html">Week 6 Blog</a></li>
+                        <li><a href="Weekly blog/week8blog.html">Week 8 Blog</a></li>
+                        <li><a href="Weekly blog/week9blog.html">Week 9 Blog</a></li>
+                        <li><a href="Weekly blog/week10blog.html">Week 10 Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="essays.html">Essays</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="websitedesign.html">Design</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+    </div>
 
-    <button onclick="scrollToTop()">To The Top</button>
-
+    <footer>
+        <p>&copy; 2024 Ying Yang. All rights reserved.</p>
+    </footer>
 
     <script src="js/websitedesign.js"></script>
-
-
     <script src="js/Scrolltothetop.js"></script>
 </body>
 </html>

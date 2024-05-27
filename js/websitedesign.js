@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.content-item');
     const readMoreButtons = document.querySelectorAll('.read-more');
 
-    // Observer for animation
+    
     const observer = new IntersectionObserver(entries => {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
-    // Menu toggle functionality
+    
     const menuToggle = document.querySelector('.menu-toggle');
     const menuOverlay = document.querySelector('.menu-overlay');
     const menuClose = document.querySelector('.menu-close');

@@ -33,7 +33,7 @@ footer {
 main {
     display: flex;
     flex: 1;
-    margin-top: 80px; /* Adjust this if your header height changes */
+    margin-top: 80px; 
 }
 
 .sidebar {
@@ -41,9 +41,9 @@ main {
     background-color: #000000;
     padding: 10px;
     position: fixed;
-    top: 60px; /* Adjust this to match the header height */
+    top: 60px; 
     left: 0;
-    height: calc(100% - 80px); /* Adjust this to match the header height */
+    height: calc(100% - 80px); 
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 10px;

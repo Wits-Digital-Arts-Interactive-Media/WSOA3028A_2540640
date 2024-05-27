@@ -1,0 +1,244 @@
+body {
+    background-color: white;
+    font-family: 'Baguet Script', cursive;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    padding-top: 100px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.week-menu {
+    position: fixed;
+    top: 100px;
+    left: 0; 
+    width: 0; 
+    background-color: #000000;
+    color: white;
+    
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+    z-index: 1000;
+    transition: width 0.3s;
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.week-menu:hover {
+    width: 200px; 
+}
+
+.week-menu .toggle-week-menu {
+    background: none;
+    border: none;
+    
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    left: -50px; 
+    top: 50%;
+    transform: translateY(-50%);
+    transition: left 0.3s;
+    
+}
+
+.week-menu.expanded .toggle-week-menu {
+    left: 100%;
+}
+
+.week-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    opacity: 1; /* Set opacity to 1 by default */
+    transition: opacity 0.3s;
+    
+    overflow-x: hidden;
+}
+
+.week-menu.expanded .week-menu-list {
+    opacity: 1;
+}
+
+.week-menu-list li {
+    margin: 10px 0;
+}
+
+.week-menu-list a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1em;
+    display: block;
+    padding: 10px;
+    
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.week-menu-list a:hover {
+    background-color: #8b6d65;
+    color: rgb(255, 255, 255); 
+    transform: scale(1.1);
+    
+}
+
+.blog-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+    margin-left: 70px;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.blog-post {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.blog-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.blog-excerpt {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #000000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.read-more:hover {
+    background-color: #8b6d65;
+    transform: scale(1.1);
+}
+
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 1001;
+    color: white;
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    flex-direction: column;
+}
+
+.menu-close {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 5em;
+    color: white;
+    cursor: pointer;
+}
+
+.overlay-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.overlay-nav li {
+    margin: 20px 0;
+}
+
+.overlay-nav a {
+    font-family: 'Baguet Script', cursive;
+    font-size: 2em;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.overlay-nav a:hover {
+    transform: rotate(10deg) scale(1.2);
+    color: #CFB095;
+}
+
+.submenu {
+    display: none;
+    padding-left: 20px;
+}
+
+.overlay-nav > ul > li:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    margin: 10px 0;
+}
+
+.submenu a {
+    font-size: 1.5em;
+}
+
+.submenu a:hover {
+    font-size: 1.7em;
+    color: #CFB095;
+}
+
+.fade-in {
+    opacity: 1;
+}

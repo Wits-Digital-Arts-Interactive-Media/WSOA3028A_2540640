@@ -30,4 +30,25 @@ document.addEventListener('DOMContentLoaded', () => {
     menuClose.addEventListener('click', () => {
         menuOverlay.style.display = 'none';
     });
+
+    var category = 'happiness';
+    $.ajax({
+        method: 'GET',
+        url: 'https://api.api-ninjas.com/v1/quotes?category=' + category,
+        headers: { 'X-Api-Key': 'ROK/K3VcVJ3+Ry1lGeM2fw==0YM0ODLfKxWx4Z6M'},
+        contentType: 'application/json',
+        success: function(result) {
+            console.log(result);
+            if (result && result.length > 0) {
+                document.getElementById('quote-display').innerText = result[0].quote;
+            } else {
+                document.getElementById('quote-display').innerText = 'No quotes available.';
+            }
+        },
+        error: function ajaxError(jqXHR) {
+            console.error('Error: ', jqXHR.responseText);
+            document.getElementById('quote-display').innerText = 'Failed to fetch quote.';
+        }
+    });
 });
+

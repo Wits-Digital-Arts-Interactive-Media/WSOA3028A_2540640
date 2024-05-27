@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 4 Blog</title>
+    <link rel="stylesheet" href="../Styling/weekblog.css">
 </head>
-
 <body>
     <header>
         <table>
             <tr>
-                <td><div id="name">Ying Yang</div></td>
+                <td>
+                    <div id="name">Ying Yang</div>
+                </td>
                 <td>
                     <nav>
-                        <ul id="navList"></ul> <!-- Empty ul element for dynamic navigation -->
+                        <!-- Navigation will be handled by the menu overlay -->
                     </nav>
                 </td>
             </tr>
@@ -23,32 +25,31 @@
 
     <h1>Week 4 Blog</h1>
 
-    <div class="blog-post">
+    <section class="section-content">
+        
+        
         <h2>Deciphering the Interface Puzzle</h2>
         <p>Central to the realm of interaction design lies the interface – the conduit through which users engage with digital systems. The interface serves as the manifestation of interaction, translating user inputs into meaningful outcomes. Its design is a meticulous process, where every element is meticulously crafted to facilitate seamless user interactions.</p>
-    </div>
-
-    <div class="blog-post">
+        
+        
         <h2>Strategizing Your Digital Blueprint</h2>
         <p>Crafting a successful interactive experience requires strategic planning and meticulous execution. It begins with a thorough understanding of user needs and behaviors, followed by the careful mapping of information architecture and content organization. This structured approach ensures that the digital landscape is intuitive and accessible to all users.</p>
-    </div>
-
-    <div class="blog-post">
+        
+        
         <h2>The Role of Semantic Markup</h2>
         <p>In the quest for optimal user experiences, semantic markup plays a pivotal role. By adhering to semantic HTML standards, designers ensure that content is not only accessible but also interpretable by both humans and machines. This fosters clarity, consistency, and compatibility across various platforms and devices.</p>
-    </div>
-
-    <div class="blog-post">
+        
+    
+        
         <h2>Personal Reflections</h2>
         <p>As I delve deeper into interaction design, I am struck by its profound impact on shaping the digital world around us. It is a discipline that requires equal parts creativity and pragmatism, where every decision is informed by a deep understanding of user needs and technical constraints. It is both an art and a science, demanding precision and foresight at every turn.</p>
-    </div>
-
-    <div class="blog-post">
+        
+    
+        
         <h2>Conclusion: A Commitment to Excellence</h2>
         <p>Interaction design is a journey of discovery and refinement, where the pursuit of excellence is paramount. By embracing best practices, leveraging emerging technologies, and prioritizing user-centric design principles, we can create digital experiences that are not only engaging but also enriching for users around the globe.</p>
-    </div>
-
-    <div class="blog-post">
+        
+        
         <h2>Reflect on Your Work for Website 1</h2>
         <p>Reflecting on my journey thus far, I'm reminded of the challenges overcome and the lessons learned. While there have been hurdles along the way, each one has been an opportunity for growth and development.</p>
         <h3>Where Have You Struggled?</h3>
@@ -59,21 +60,50 @@
         <p>Looking ahead, I'm excited to continue pushing the boundaries of creativity and innovation. There's always room for improvement, and I'm eager to explore new ideas, refine my skills, and embark on new adventures in the world of design.</p>
         <h3>Reflect on How Your Original Wireframes Hold Up in Line with This Process:</h3>
         <p>As I look back at my original wireframes, I'm struck by how far I've come. While some elements have evolved, the core vision remains intact. They've served as a guiding light throughout my journey, helping me stay focused and on track amidst the ever-changing landscape of design.</p>
-    </div>
+        
     
-    <footer>
-        <a href="../blog.html">Back to Blog</a>
-    </footer>
-
-    <button onclick="scrollToTop()">To The Top</button>
-
-
-    <script src="../js/weekblog.js"></script>
-
-
-    <script src="../js/Scrolltothetop.js"></script>
-
+    </section>
 
    
+    <div class="menu-toggle">☰</div>
+    <div class="menu-overlay">
+        <div class="menu-close">×</div>
+        <nav class="overlay-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li>
+                    <a href="../blog.html">Blog</a>
+                    <ul class="submenu">
+                        <li><a href="../Weekly blog/week1blog.html">Week 1 Blog</a></li>
+                        <li><a href="../Weekly blog/week2blog.html">Week 2 Blog</a></li>
+                        <li><a href="../Weekly blog/week3blog.html">Week 3 Blog</a></li>
+                        <li><a href="../Weekly blog/week4blog.html">Week 4 Blog</a></li>
+                        <li><a href="../Weekly blog/week6blog.html">Week 6 Blog</a></li>
+                        <li><a href="../Weekly blog/week8blog.html">Week 8 Blog</a></li>
+                        <li><a href="../Weekly blog/week9blog.html">Week 9 Blog</a></li>
+                        <li><a href="../Weekly blog/week10blog.html">Week 10 Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="../essays.html">Essays</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../websitedesign.html">Design</a></li>
+                <li><a href="../portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+    </div>
+   
+  
+
+    <div class="button-container">
+        <a href="../blog.html" class="back-to-blog">Back to Blog</a>
+        <button onclick="scrollToTop()" class="to-top-btn">To The Top</button>
+    </div>
+
+    <script src="../js/weekblog.js"></script>
+    <script src="../js/Scrolltothetop.js"></script>
+
+    <footer>
+        <p>&copy; 2024 Ying Yang. All rights reserved.</p>
+    </footer>
 </body>
 </html>

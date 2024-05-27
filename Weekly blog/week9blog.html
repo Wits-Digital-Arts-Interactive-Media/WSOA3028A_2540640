@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 9 Blog</title>
+    <link rel="stylesheet" href="../Styling/weekblog.css">
 </head>
-
-
 <body>
     <header>
         <table>
             <tr>
-                <td><div id="name">Ying Yang</div></td>
+                <td>
+                    <div id="name">Ying Yang</div>
+                </td>
                 <td>
                     <nav>
-                        <ul id="navList"></ul> <!-- Empty ul element for dynamic navigation -->
+                        <!-- Navigation will be handled by the menu overlay -->
                     </nav>
                 </td>
             </tr>
@@ -25,45 +26,66 @@
     <h1>Week 9 Blog</h1>
     <h1>Understanding the Localness of Search Engine Results: Implications for Web Development in South Africa</h1>
 
-    <div class="blog-post">
-        <h2> What I Learned from the Readings:</h2>
-        <p>From "Towards a Study of Information Geographies: (im)mutable Augmentations and a Mapping of the Geographies of Information," I gained insights into the spatial dimensions of digital information and how it is distributed across the globe. The paper highlighted the concept of information geographies, emphasizing how digital information flows are shaped by and contribute to existing social, economic, and political inequalities. It underscored the importance of understanding the geographic context in which information is produced, accessed, and shared, as well as the need for critical analysis of the implications for individuals and communities.</p>
-        <p>Regarding "Digital Hegemonies: The Localness of Search Engine Results" by Ballatore, Graham, and Sen, I learned about the phenomenon of localized search engine results and its impact on digital information access. The paper discussed how search engines, despite their global reach, often provide results that are tailored to users' geographic locations, reflecting and reinforcing digital hegemonies. It highlighted the role of algorithms, user data, and socio-economic factors in shaping the localness of search results and raised important questions about information diversity, bias, and power dynamics in online information ecosystems.</p>
+    <section class="section-content">
+        
+        
+            <h2> What I Learned from the Readings:</h2>
+            <p>From "Towards a Study of Information Geographies: (im)mutable Augmentations and a Mapping of the Geographies of Information," I gained insights into the spatial dimensions of digital information and how it is distributed across the globe. The paper highlighted the concept of information geographies, emphasizing how digital information flows are shaped by and contribute to existing social, economic, and political inequalities. It underscored the importance of understanding the geographic context in which information is produced, accessed, and shared, as well as the need for critical analysis of the implications for individuals and communities.</p>
+            <p>Regarding "Digital Hegemonies: The Localness of Search Engine Results" by Ballatore, Graham, and Sen, I learned about the phenomenon of localized search engine results and its impact on digital information access. The paper discussed how search engines, despite their global reach, often provide results that are tailored to users' geographic locations, reflecting and reinforcing digital hegemonies. It highlighted the role of algorithms, user data, and socio-economic factors in shaping the localness of search results and raised important questions about information diversity, bias, and power dynamics in online information ecosystems.</p>
+        
+        
+            <h2>The Relationship Between the Two Readings:</h2>
+            <p>The relationship between these two readings lies in their exploration of the spatial dimensions of digital information and the ways in which it is influenced by geographical context. While "Towards a Study of Information Geographies" provides a theoretical framework for understanding the geographies of information and their socio-economic implications, "Digital Hegemonies" offers a practical examination of how these dynamics manifest in the context of search engine results. Both readings contribute to a broader understanding of the uneven distribution of digital information and its implications for individuals, communities, and societies.</p>
+        
+    
+        
+            <h2>Impact on My Thinking about Web Development as a South African:</h2>
+            <p>As a South African student web developer, these readings have prompted me to consider the geographical dimensions of my work more critically. They have highlighted the importance of designing and developing websites and applications that are sensitive to the diverse socio-economic contexts in which they are accessed. Understanding the localness of search engine results and the digital hegemonies that shape online information access is crucial for creating inclusive and equitable web experiences. Additionally, these readings have underscored the need for greater awareness of algorithmic biases, data localization issues, and digital inequalities in the South African context, informing my approach to web development projects and advocacy efforts for a more inclusive digital ecosystem.</p>
+       
+
+
+
+
+    </section>
+
+    <div class="menu-toggle">☰</div>
+    <div class="menu-overlay">
+        <div class="menu-close">×</div>
+        <nav class="overlay-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li>
+                    <a href="../blog.html">Blog</a>
+                    <ul class="submenu">
+                        <li><a href="../Weekly blog/week1blog.html">Week 1 Blog</a></li>
+                        <li><a href="../Weekly blog/week2blog.html">Week 2 Blog</a></li>
+                        <li><a href="../Weekly blog/week3blog.html">Week 3 Blog</a></li>
+                        <li><a href="../Weekly blog/week4blog.html">Week 4 Blog</a></li>
+                        <li><a href="../Weekly blog/week6blog.html">Week 6 Blog</a></li>
+                        <li><a href="../Weekly blog/week8blog.html">Week 8 Blog</a></li>
+                        <li><a href="../Weekly blog/week9blog.html">Week 9 Blog</a></li>
+                        <li><a href="../Weekly blog/week10blog.html">Week 10 Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="../essays.html">Essays</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../websitedesign.html">Design</a></li>
+                <li><a href="../portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
     </div>
 
-    <div class="blog-post">
-        <h2>The Relationship Between the Two Readings:</h2>
-        <p>The relationship between these two readings lies in their exploration of the spatial dimensions of digital information and the ways in which it is influenced by geographical context. While "Towards a Study of Information Geographies" provides a theoretical framework for understanding the geographies of information and their socio-economic implications, "Digital Hegemonies" offers a practical examination of how these dynamics manifest in the context of search engine results. Both readings contribute to a broader understanding of the uneven distribution of digital information and its implications for individuals, communities, and societies.</p>
+    <div class="button-container">
+        <a href="../blog.html" class="back-to-blog">Back to Blog</a>
+        <button onclick="scrollToTop()" class="to-top-btn">To The Top</button>
     </div>
-
-    <div class="blog-post">
-        <h2>Impact on My Thinking about Web Development as a South African:</h2>
-        <p>As a South African student web developer, these readings have prompted me to consider the geographical dimensions of my work more critically. They have highlighted the importance of designing and developing websites and applications that are sensitive to the diverse socio-economic contexts in which they are accessed. Understanding the localness of search engine results and the digital hegemonies that shape online information access is crucial for creating inclusive and equitable web experiences. Additionally, these readings have underscored the need for greater awareness of algorithmic biases, data localization issues, and digital inequalities in the South African context, informing my approach to web development projects and advocacy efforts for a more inclusive digital ecosystem.</p>
-    </div>
-
-    <!--<div class="blog-post">
-        <h2></h2>
-        <p></p>
-    </div>-->
-
-
-    
-
-    
-    
-    <footer>
-        <a href="../blog.html">Back to Blog</a>
-    </footer>
-
-
-    <button onclick="scrollToTop()">To The Top</button>
-
 
     <script src="../js/weekblog.js"></script>
-
-
     <script src="../js/Scrolltothetop.js"></script>
 
-
+    <footer>
+        <p>&copy; 2024 Ying Yang. All rights reserved.</p>
+    </footer>
 </body>
 </html>
+

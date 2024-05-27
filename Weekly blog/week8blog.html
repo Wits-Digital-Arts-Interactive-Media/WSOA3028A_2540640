@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 8 Blog</title>
+    <link rel="stylesheet" href="../Styling/weekblog.css">
 </head>
-
-
 <body>
     <header>
         <table>
             <tr>
-                <td><div id="name">Ying Yang</div></td>
+                <td>
+                    <div id="name">Ying Yang</div>
+                </td>
                 <td>
                     <nav>
-                        <ul id="navList"></ul> <!-- Empty ul element for dynamic navigation -->
+                        <!-- Navigation will be handled by the menu overlay -->
                     </nav>
                 </td>
             </tr>
@@ -25,56 +26,85 @@
     <h1>Week 8 Blog</h1>
     <h1>Unveiling Bias: A Critical Analysis of "Gender Shades" by Buolamwini and Gebru</h1>
 
-    <div class="blog-post">
+    <section class="section-content">
+        
+    
         <h2>The Impact of Algorithmic Bias</h2>
         <p>In their seminal paper "Gender Shades: Intersectional Accuracy Disparities in Commercial Gender Classification," Joy Buolamwini and Timnit Gebru uncover significant biases embedded within facial analysis algorithms developed by major technology companies. This critical analysis delves into the findings of their study, examines its strengths and limitations, and explores avenues for further research and action.</p>
-    </div>
+    
 
-    <div class="blog-post">
+    
         <h2>Unpacking the Findings: Disparities in Gender Classification Accuracy</h2>
         <p>Buolamwini and Gebru's study reveals alarming disparities in the accuracy of facial analysis algorithms across different gender and skin tone groups. By systematically evaluating the performance of commercial gender classification algorithms, the authors demonstrate how darker-skinned females face the highest error rates, highlighting the intersectional nature of algorithmic bias.</p>
-    </div>
+    
 
-    <div class="blog-post">
+    
         <h2>Empirical Rigor and Real-World Impact</h2>
         <p>"Gender Shades" employs rigorous testing methodologies to provide compelling evidence of algorithmic biases in facial analysis algorithms. By grounding their findings in empirical data, Buolamwini and Gebru underscore the real-world consequences of algorithmic discrimination, prompting widespread recognition and action within the tech industry and beyond.</p>
-    </div>
+    
 
-    <div class="blog-post">
+    
         <h2>Addressing the Gaps: From Diagnosis to Action</h2>
         <p>While "Gender Shades" effectively exposes the problem of bias in facial analysis algorithms, it falls short in proposing comprehensive solutions to this issue. To address systemic biases in AI, it is essential to delve deeper into the underlying causes and potential remedies. This requires a multifaceted approach that encompasses algorithmic design, data collection practices, regulatory frameworks, and ethical considerations.</p>
-    </div>
+    
 
-    <div class="blog-post">
+    
         <h2>Exploring Pathways to Algorithmic Fairness</h2>
         <p>Engaging critically with the reading entails delving into broader discussions on algorithmic bias and its societal implications. This involves examining related research on fairness-aware machine learning, studying case studies of algorithmic discrimination in various domains, and considering ethical frameworks for AI development and deployment.</p>
-    </div>
+    
 
-    <div class="blog-post">
+    
         <h2>Advancements and Challenges: The Road Ahead</h2>
         <p>As we reflect on the insights from "Gender Shades," it is crucial to recognize the progress made in mitigating algorithmic bias while acknowledging the ongoing challenges. By conducting further research, fostering critical discourse, and advocating for inclusive AI technologies, we can work towards building a future where algorithms reflect the diversity and values of the societies they serve.</p>
-    </div>
+    
 
-    <div class="blog-post">
+    
         <h2>Conclusion</h2>
         <p>In conclusion, "Gender Shades" serves as a pivotal contribution to the discourse on algorithmic bias and fairness in AI. By critically analyzing its findings and exploring avenues for future research and action, we can strive towards a future where AI technologies are truly inclusive, equitable, and reflective of the diverse societies they seek to serve.</p>
+    
+
+
+
+    </section>
+
+    <div class="menu-toggle">☰</div>
+    <div class="menu-overlay">
+        <div class="menu-close">×</div>
+        <nav class="overlay-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li>
+                    <a href="../blog.html">Blog</a>
+                    <ul class="submenu">
+                        <li><a href="../Weekly blog/week1blog.html">Week 1 Blog</a></li>
+                        <li><a href="../Weekly blog/week2blog.html">Week 2 Blog</a></li>
+                        <li><a href="../Weekly blog/week3blog.html">Week 3 Blog</a></li>
+                        <li><a href="../Weekly blog/week4blog.html">Week 4 Blog</a></li>
+                        <li><a href="../Weekly blog/week6blog.html">Week 6 Blog</a></li>
+                        <li><a href="../Weekly blog/week8blog.html">Week 8 Blog</a></li>
+                        <li><a href="../Weekly blog/week9blog.html">Week 9 Blog</a></li>
+                        <li><a href="../Weekly blog/week10blog.html">Week 10 Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="../essays.html">Essays</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../websitedesign.html">Design</a></li>
+                <li><a href="../portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
     </div>
 
-    
-    
-    <footer>
-        <a href="../blog.html">Back to Blog</a>
-    </footer>
-
-
-    <button onclick="scrollToTop()">To The Top</button>
-
+    <div class="button-container">
+        <a href="../blog.html" class="back-to-blog">Back to Blog</a>
+        <button onclick="scrollToTop()" class="to-top-btn">To The Top</button>
+    </div>
 
     <script src="../js/weekblog.js"></script>
-
-
     <script src="../js/Scrolltothetop.js"></script>
 
-
+    <footer>
+        <p>&copy; 2024 Ying Yang. All rights reserved.</p>
+    </footer>
 </body>
 </html>
+

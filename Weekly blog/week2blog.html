@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 2 Blog</title>
+    <link rel="stylesheet" href="../Styling/weekblog.css">
 </head>
 <body>
     <header>
         <table>
             <tr>
-                <td><div id="name">Ying Yang</div></td>
+                <td>
+                    <div id="name">Ying Yang</div>
+                </td>
                 <td>
                     <nav>
-                        <ul id="navList"></ul> <!-- Empty ul element for dynamic navigation -->
+                        <!-- Navigation will be handled by the menu overlay -->
                     </nav>
                 </td>
             </tr>
@@ -22,7 +25,8 @@
     <h1>My Folder Structure and URL Scheme</h1>
 
     <h2>Folder Structure</h2>
-    <p>Let's start with the folder structure. Keeping things organized is crucial for maintaining a tidy and manageable website. Here's how I've structured my folders:</p>
+    <section class="section-content">
+        <p>Let's start with the folder structure. Keeping things organized is crucial for maintaining a tidy and manageable website. Here's how I've structured my folders:</p>
     <ul>
         <li>Root</li>
         <ul>
@@ -96,16 +100,46 @@
         <li>Accessibility: Interaction is inclusive, ensuring that digital experiences are accessible to users of all abilities. From intuitive navigation to assistive technologies, the web strives to remove barriers and create a seamless experience for everyone, regardless of their individual circumstances.</li>
         <li>Feedback: Interaction involves a two-way exchange of information, with users providing feedback and input that shapes the evolution of digital services.</li>
     </ul>
-    <a href="../blog.html">Back to Blog</a>
+    </section>
 
     
-    <button onclick="scrollToTop()">To The Top</button>
+    <div class="menu-toggle">☰</div>
+    <div class="menu-overlay">
+        <div class="menu-close">×</div>
+        <nav class="overlay-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li>
+                    <a href="../blog.html">Blog</a>
+                    <ul class="submenu">
+                        <li><a href="../Weekly blog/week1blog.html">Week 1 Blog</a></li>
+                        <li><a href="../Weekly blog/week2blog.html">Week 2 Blog</a></li>
+                        <li><a href="../Weekly blog/week3blog.html">Week 3 Blog</a></li>
+                        <li><a href="../Weekly blog/week4blog.html">Week 4 Blog</a></li>
+                        <li><a href="../Weekly blog/week6blog.html">Week 6 Blog</a></li>
+                        <li><a href="../Weekly blog/week8blog.html">Week 8 Blog</a></li>
+                        <li><a href="../Weekly blog/week9blog.html">Week 9 Blog</a></li>
+                        <li><a href="../Weekly blog/week10blog.html">Week 10 Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="../essays.html">Essays</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../websitedesign.html">Design</a></li>
+                <li><a href="../portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+    </div>
 
+    <div class="button-container">
+        <a href="../blog.html" class="back-to-blog">Back to Blog</a>
+        <button onclick="scrollToTop()" class="to-top-btn">To The Top</button>
+    </div>
 
     <script src="../js/weekblog.js"></script>
-
-
     <script src="../js/Scrolltothetop.js"></script>
 
+    <footer>
+        <p>&copy; 2024 Ying Yang. All rights reserved.</p>
+    </footer>
 </body>
 </html>

@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 6 Blog Post</title>
+    <title>Week 6 Blog</title>
+    <link rel="stylesheet" href="../Styling/weekblog.css">
 </head>
-
 <body>
     <header>
         <table>
             <tr>
-                <td><div id="name">Ying Yang</div></td>
+                <td>
+                    <div id="name">Ying Yang</div>
+                </td>
                 <td>
                     <nav>
-                        <ul id="navList"></ul> <!-- Empty ul element for dynamic navigation -->
+                        <!-- Navigation will be handled by the menu overlay -->
                     </nav>
                 </td>
             </tr>
@@ -23,7 +24,10 @@
 
     <h1> Week 6 Blog </h1>
     <h1>Exploring Potential Websites for Essay 1: Analyzing UX & UI</h1>
-
+   
+   
+    <section class="section-content">
+      
     <p>Welcome back, fellow designers! As we journey into Week Six of our web design odyssey, it's time to roll up our sleeves and dive into the exciting world of UX & UI analysis. Today, we're taking the first step in this process by exploring potential websites for our upcoming Essay 1. Let's dive in!</p>
 
     <h2>Selecting the Right Candidates</h2>
@@ -73,19 +77,45 @@
     <h2>Conclusion: A Wealth of Opportunities</h2>
     <p>As we consider these examples and countless others, it's clear that the world of UX & UI analysis is ripe with possibilities. Whether we're dissecting the intricacies of an e-commerce giant or exploring the nuances of a community-driven platform, each website offers a unique lens through which to examine the art and science of user experience design.</p>
 
-    <footer>
-        <a href="../blog.html">Back to Blog</a>
-    </footer>
+    </section>
 
-    <button onclick="scrollToTop()">To The Top</button>
+    <div class="menu-toggle">☰</div>
+    <div class="menu-overlay">
+        <div class="menu-close">×</div>
+        <nav class="overlay-nav">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li>
+                    <a href="../blog.html">Blog</a>
+                    <ul class="submenu">
+                        <li><a href="../Weekly blog/week1blog.html">Week 1 Blog</a></li>
+                        <li><a href="../Weekly blog/week2blog.html">Week 2 Blog</a></li>
+                        <li><a href="../Weekly blog/week3blog.html">Week 3 Blog</a></li>
+                        <li><a href="../Weekly blog/week4blog.html">Week 4 Blog</a></li>
+                        <li><a href="../Weekly blog/week6blog.html">Week 6 Blog</a></li>
+                        <li><a href="../Weekly blog/week8blog.html">Week 8 Blog</a></li>
+                        <li><a href="../Weekly blog/week9blog.html">Week 9 Blog</a></li>
+                        <li><a href="../Weekly blog/week10blog.html">Week 10 Blog</a></li>
+                    </ul>
+                </li>
+                <li><a href="../essays.html">Essays</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../websitedesign.html">Design</a></li>
+                <li><a href="../portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+    </div>
 
+    <div class="button-container">
+        <a href="../blog.html" class="back-to-blog">Back to Blog</a>
+        <button onclick="scrollToTop()" class="to-top-btn">To The Top</button>
+    </div>
 
     <script src="../js/weekblog.js"></script>
-
-
     <script src="../js/Scrolltothetop.js"></script>
 
-   
+    <footer>
+        <p>&copy; 2024 Ying Yang. All rights reserved.</p>
+    </footer>
 </body>
-
 </html>

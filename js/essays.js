@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Submenu toggle 
     const submenuLinks = document.querySelectorAll('.overlay-nav > ul > li > a');
-
     submenuLinks.forEach(link => {
         if (link.nextElementSibling && link.nextElementSibling.classList.contains('submenu')) {
             link.addEventListener('click', (event) => {
@@ -64,7 +63,4 @@ document.addEventListener('DOMContentLoaded', () => {
             essayGrid.scrollLeft -= scrollSpeed;
         }
     });
-
-    
-
 });

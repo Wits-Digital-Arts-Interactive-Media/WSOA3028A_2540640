@@ -12,7 +12,7 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    padding: 20px 20px;
+    padding: 20px;
     background-color: black;
     color: white;
     text-align: center;
@@ -167,7 +167,6 @@ button:hover {
     color: #CFB095;
 }
 
-
 .cube-container {
     width: 100px;
     height: 100px;
@@ -206,3 +205,46 @@ button:hover {
 .cube .left { transform: rotateY(-90deg) translateZ(50px); }
 .cube .top { transform: rotateX(90deg) translateZ(50px); }
 .cube .bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .welcome-section {
+        flex-direction: column;
+    }
+
+    .centered-image {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        top: 10px;
+        right: 10px;
+    }
+
+    .menu-close {
+        top: 10px;
+        left: 10px;
+    }
+
+    .overlay-nav a {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        padding: 8px 16px;
+        font-size: 1em;
+    }
+
+    .overlay-nav a {
+        font-size: 1.2em;
+    }
+}

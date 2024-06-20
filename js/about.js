@@ -30,10 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
         menuOverlay.style.display = 'none';
     });
 
-    const category = 'happiness'; // Changed from var to const because the value is not going to change
+    const category = 'happiness'; // Changed from var to const 
     $.ajax({
         method: 'GET',
-        url: `https://api.api-ninjas.com/v1/quotes?category=${category}`, // Template literal for better readability
+        url: `https://api.api-ninjas.com/v1/quotes?category=${category}`, 
         headers: { 'X-Api-Key': 'ROK/K3VcVJ3+Ry1lGeM2fw==0YM0ODLfKxWx4Z6M'},
         contentType: 'application/json',
         success: function(result) {

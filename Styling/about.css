@@ -1,3 +1,4 @@
+
 body {
     background-color: white;
     font-family: 'Baguet Script', cursive;
@@ -8,14 +9,16 @@ body {
     min-height: 100vh;
 }
 
+
 header {
     display: flex;
     justify-content: space-between;
-    padding: 20px 20px;
+    padding: 20px;
     background-color: black;
     color: white;
     text-align: center;
 }
+
 
 footer {
     background-color: black;
@@ -25,16 +28,18 @@ footer {
     margin-top: auto;
 }
 
+
 main {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 100px;
-    width: 100%;
-    max-width: 1000px;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
 }
+
 
 .central-line {
     position: fixed;
@@ -47,8 +52,10 @@ main {
     z-index: -1;
 }
 
+
 .section-content {
-    width: 40%;
+    width: 90%;
+    max-width: 500px;
     margin: 50px 0;
     opacity: 0;
     transform: translateY(100px);
@@ -70,10 +77,12 @@ main {
     transform: translateY(0);
 }
 
+
 .social-icon {
     width: 40px; 
     height: 40px; 
 }
+
 
 .menu-toggle {
     position: fixed;
@@ -84,6 +93,7 @@ main {
     z-index: 1001;
     color: white;
 }
+
 
 .menu-overlay {
     display: none;
@@ -99,6 +109,7 @@ main {
     flex-direction: column;
 }
 
+
 .menu-close {
     position: absolute;
     top: 20px;
@@ -107,6 +118,7 @@ main {
     color: white;
     cursor: pointer;
 }
+
 
 .overlay-nav ul {
     list-style: none;
@@ -132,6 +144,7 @@ main {
     color: #CFB095;
 }
 
+
 .submenu {
     display: none;
     padding-left: 20px;
@@ -152,4 +165,65 @@ main {
 .submenu a:hover {
     font-size: 1.7em;
     color: #CFB095;
+}
+
+
+@media (max-width: 1200px) {
+    main {
+        padding-top: 80px;
+    }
+
+    .section-content {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-content {
+        width: 100%;
+        margin: 30px 0;
+    }
+
+    .section-content.right, .section-content.left {
+        align-self: center;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        top: 10px;
+        right: 10px;
+    }
+
+    .menu-close {
+        top: 10px;
+        left: 10px;
+    }
+
+    .overlay-nav a {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding-top: 60px;
+    }
+
+    .section-content {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .overlay-nav a {
+        font-size: 1.2em;
+    }
+
+    .submenu a {
+        font-size: 1.2em;
+    }
 }

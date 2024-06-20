@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.content-item');
     const readMoreButtons = document.querySelectorAll('.read-more');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuOverlay = document.querySelector('.menu-overlay');
+    const menuClose = document.querySelector('.menu-close');
 
-    
     const observer = new IntersectionObserver(entries => {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
@@ -19,11 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
-    
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menuOverlay = document.querySelector('.menu-overlay');
-    const menuClose = document.querySelector('.menu-close');
-
     menuToggle.addEventListener('click', () => {
         menuOverlay.style.display = 'flex';
     });
@@ -32,13 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
         menuOverlay.style.display = 'none';
     });
 
-   // Read more button functionality
-   readMoreButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const section = button.closest('.content-item');
-        const contentDetails = section.querySelector('.content-details');
-        const isVisible = contentDetails.classList.toggle('visible');
-        button.textContent = isVisible ? 'Close' : 'Read More';
+    // Read more button functionality
+    readMoreButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const section = button.closest('.content-item');
+            const contentDetails = section.querySelector('.content-details');
+            const isVisible = contentDetails.classList.toggle('visible');
+            button.textContent = isVisible ? 'Close' : 'Read More';
+        });
     });
-});
 });

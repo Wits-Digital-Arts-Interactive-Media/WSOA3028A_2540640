@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
     const sections = document.querySelectorAll('.section-content');
 
     const observer = new IntersectionObserver(entries => {
@@ -31,10 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
         menuOverlay.style.display = 'none';
     });
 
-    var category = 'happiness';
+    const category = 'happiness'; // Changed from var to const because the value is not going to change
     $.ajax({
         method: 'GET',
-        url: 'https://api.api-ninjas.com/v1/quotes?category=' + category,
+        url: `https://api.api-ninjas.com/v1/quotes?category=${category}`, // Template literal for better readability
         headers: { 'X-Api-Key': 'ROK/K3VcVJ3+Ry1lGeM2fw==0YM0ODLfKxWx4Z6M'},
         contentType: 'application/json',
         success: function(result) {
@@ -51,4 +50,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
